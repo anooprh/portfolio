@@ -8,26 +8,41 @@
 
 <div class="ubuntu-screen">
     <div class="row">
-        <div class="ubuntu-sidebar col-md-1">
+        <div class="ubuntu-sidebar col-sm-1">
+            <div class="ubuntu-sidebar-item"></div>
+            <div class="ubuntu-sidebar-item"></div>
+            <div class="ubuntu-sidebar-item"></div>
+            <div class="ubuntu-sidebar-item"></div>
+            <div class="ubuntu-sidebar-item"></div>
+            <div class="ubuntu-sidebar-item"></div>
         </div>
-        <div class="ubuntu-window col-md-11" draggable="true">
-            <div class="ubuntu-window-header">
-                    <span class="ubuntu-close-btn">&nbspx&nbsp</span>
-                    <span class="ubuntu-minimise-btn">&nbsp-&nbsp</span>
-                    <span class="ubuntu-maximize-btn">&nbspo&nbsp</span>
+        <div class="col-sm-11 ubuntu-main-area">
+            <div class="ubuntu-window" draggable="true">
+                <div class="ubuntu-window-header">
+                    <span class="ubuntu-close-btn">&nbsp;x&nbsp;</span>
+                    <span class="ubuntu-minimise-btn">&nbsp;&#95;&nbsp;</span>
+                    <span class="ubuntu-maximize-btn">&nbsp;&square;&nbsp;</span>
                     <span>&nbspTerminal</span>
+                </div>
+                <div class="ubuntu-window-body">
+                    <div id="terminal"></div>
+                </div>
             </div>
-            <div class="ubuntu-window-body">
-                <div id="terminal"></div>
+
+            <div class="down-navigator row">
+                <div class="col-sm-11">Not Familiar With Command Line? Scroll down</div>
+                <div class="arrow-down-container col-sm-1">
+                    <div class="arrowdown-holder"></div>
+                    <div class="arrow-down"></div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <!--<div id="holder" class="row">-->
-    <!--<div id="terminal" class="col-md-8">-->
-    <!--</div>-->
+<!--<div id="terminal" class="col-md-8">-->
 <!--</div>-->
-
+<!--</div>-->
 
 
 <script src='/js/lib/jquery-2.1.1.js'></script>
@@ -37,16 +52,16 @@
 <!--<script src="/scripts/main.js"></script>-->
 <script>
     $('#terminal').terminal({
-                echo: function(arg1) {
+                echo: function (arg1) {
                     this.echo(arg1);
                 },
 //                rpc: 'some_file.php',
                 calc: {
-                    add: function(a, b) {
-                        this.echo(a+b);
+                    add: function (a, b) {
+                        this.echo(a + b);
                     },
-                    sub: function(a, b) {
-                        this.echo(a-b);
+                    sub: function (a, b) {
+                        this.echo(a - b);
                     }
                 }
             },

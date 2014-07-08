@@ -3,6 +3,9 @@
     height: 100vh;
     background-image: url('../img/ubuntu_wallpaper.jpg');
 }
+.ubuntu-main-area {
+    height: 100%;
+}
 
 .row {
     width: 100%;
@@ -80,4 +83,13 @@
     background: -ms-radial-gradient(center, ellipse cover,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* IE10+ */
     background: radial-gradient(ellipse at center,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+
+.ubuntu-sidebar-item {
+    width: calc(100% + 15px);
+    height: 50px;
+    background-color: #5E1C49;
+    padding: 3px;
+    margin-top: 4px ;
+    border-radius: 3px;
 }
