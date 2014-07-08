@@ -1,0 +1,29 @@
+/*#holder {*/
+    /*font-family: "Lucida Console", Monaco, monospace;*/
+    /*min-height: 100%;*/
+    /*height: auto !important;*/
+    /*height: 100vh;*/
+    /*margin: 0 auto -100vh; *//* the bottom margin is the negative value of the footer's height */
+/*}*/
+
+.terminal {
+    height: 100%;
+    overflow-y: auto;
+    background-color: #300A24;
+    color: #FFFBD4;
+}
+.cmd {
+    background-color: #300A24;
+}
+.cmd > span {
+    color: #FFFBD4;
+}
+
+.prompt {
+    color: #FFFBD4;
+}
+
+.blink {
+    background-color: #300A24;
+    color: #FFFBD4;
+}
