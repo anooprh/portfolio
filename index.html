@@ -7,50 +7,62 @@
 <body>
 
 <div class="ubuntu-screen">
-    <div class="row">
-        <div class="ubuntu-sidebar col-sm-1">
-            <div class="ubuntu-sidebar-item"></div>
-            <div class="ubuntu-sidebar-item"></div>
-            <div class="ubuntu-sidebar-item"></div>
-            <div class="ubuntu-sidebar-item"></div>
-            <div class="ubuntu-sidebar-item"></div>
-            <div class="ubuntu-sidebar-item"></div>
-        </div>
-        <div class="col-sm-11 ubuntu-main-area">
-            <div class="ubuntu-window" draggable="true">
-                <div class="ubuntu-window-header">
-                    <span class="ubuntu-close-btn">&nbsp;x&nbsp;</span>
-                    <span class="ubuntu-minimise-btn">&nbsp;&#95;&nbsp;</span>
-                    <span class="ubuntu-maximize-btn">&nbsp;&square;&nbsp;</span>
-                    <span>&nbspTerminal</span>
-                </div>
-                <div class="ubuntu-window-body">
-                    <div id="terminal"></div>
-                </div>
+    <div class="ubuntu-sidebar">
+        <div class="ubuntu-sidebar-item"></div>
+        <div class="ubuntu-sidebar-item"></div>
+        <div class="ubuntu-sidebar-item"></div>
+        <div class="ubuntu-sidebar-item"></div>
+        <div class="ubuntu-sidebar-item"></div>
+        <div class="ubuntu-sidebar-item"></div>
+    </div>
+    <div class="ubuntu-main-area">
+        <div class="ubuntu-window" draggable="true">
+            <div class="ubuntu-window-header">
+                <span class="ubuntu-close-btn">&nbsp;x&nbsp;</span>
+                <span class="ubuntu-minimise-btn">&nbsp;&#95;&nbsp;</span>
+                <span class="ubuntu-maximize-btn">&nbsp;&square;&nbsp;</span>
+                <span>&nbsp;Terminal</span>
             </div>
+            <div class="ubuntu-window-body">
+                <div id="terminal"></div>
+            </div>
+        </div>
 
-            <div class="down-navigator row">
-                <div class="col-sm-11">Not Familiar With Command Line? Scroll down</div>
-                <div class="arrow-down-container col-sm-1">
-                    <div class="arrowdown-holder"></div>
-                    <div class="arrow-down"></div>
-                </div>
+        <div class="ubuntu-window" draggable="true">
+            <div class="ubuntu-window-header">
+                <span class="ubuntu-close-btn">&nbsp;x&nbsp;</span>
+                <span class="ubuntu-minimise-btn">&nbsp;&#95;&nbsp;</span>
+                <span class="ubuntu-maximize-btn">&nbsp;&square;&nbsp;</span>
+                <span>&nbsp;About</span>
+            </div>
+            <div class="ubuntu-window-body">
             </div>
         </div>
+        <!--<div class="down-navigator">-->
+            <!--<div>Not Familiar With Command Line? Scroll down</div>-->
+            <!--<div class="arrow-down-container">-->
+                <!--<div class="arrowdown-holder"></div>-->
+                <!--<div class="arrow-down"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+
     </div>
 </div>
-<!--<div id="holder" class="row">-->
-<!--<div id="terminal" class="col-md-8">-->
-<!--</div>-->
-<!--</div>-->
+
 
 
 <script src='/js/lib/jquery-2.1.1.js'></script>
+<script src='/js/lib/jquery-ui.js'></script>
 <script src='/js/lib/bootstrap.js'></script>
 <script src="/js/lib/jquery.terminal-0.8.7.js"></script>
 <!--<script src="/js/terminal.js"></script>-->
 <!--<script src="/scripts/main.js"></script>-->
 <script>
+    $(document).ready(function() {
+
+        $(".ubuntu-window").draggable().resizable();
+    });
     $('#terminal').terminal({
                 echo: function (arg1) {
                     this.echo(arg1);
@@ -79,6 +91,7 @@
 <link href="/css/lib/bootstrap.css" rel="stylesheet"/>
 <link href="/css/lib/bootstrap-theme.css" rel="stylesheet"/>
 <link href="/css/lib/jquery.terminal.css" rel="stylesheet"/>
+<link href="/css/lib/jquery-ui.css" rel="stylesheet"/>
 
 <link href="/css/ubuntu-theme.css" rel="stylesheet"/>
 <link href="/css/custom.css" rel="stylesheet"/>
