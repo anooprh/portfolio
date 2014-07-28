@@ -1,13 +1,13 @@
 .ubuntu-screen {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-image: url('../img/ubuntu_wallpaper.jpg');
-    position: fixed;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 .ubuntu-main-area {
+    margin-top: 50px;
     height: 100%;
-    margin-left: 5vw;
+    /*margin-left: 5vw;*/
 }
 
 .row {
@@ -16,17 +16,18 @@
 }
 
 .ubuntu-sidebar {
-    height: 100vh;
-    width: 4vw;
+    height: 30px;
+    width: 100%;
     background-color: #420B0B;
     border-right: solid;
     border-right-width: 2px;
     border-fight-color: #A15655;
     opacity: 0.75;
     position: fixed;
+    z-index: 1;
 }
 .ubuntu-sidebar-item {
-    width: calc(100% - 4px);
+    width: 40px;
     height: 40px;
     background-color: #5E1C49;
     padding: 3px;
@@ -38,7 +39,7 @@
 
 .ubuntu-window {
     height: 75%;
-    width: 97%;
+    /*width: 97%;*/
     margin: 10px;
     margin-bottom: 10%;
 }
